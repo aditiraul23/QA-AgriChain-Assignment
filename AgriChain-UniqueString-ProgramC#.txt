@@ -1,0 +1,36 @@
+using System;
+using System.Text;
+using System.Collections.Generic;
+
+
+namespace HelloWorld
+{
+  class Program
+  {
+    static void Main()
+{
+try{
+    Console.WriteLine("Enter A string");
+    string input ="aadtt";//string input=Console.ReadLine();
+    StringBuilder result=new StringBuilder();
+    HashSet<char> hashRes= new HashSet<char>();
+    Console.WriteLine(result);
+     Console.WriteLine("Characters seen before loop: " + string.Join(", ", hashRes));
+     foreach (char c in input)
+     {
+     if(!hashRes.Contains(c))
+     {
+     hashRes.Add(c);
+      result.Append(c);
+     }
+     } 
+     Console.WriteLine("String after removing duplicates: " + result.ToString());
+    Console.WriteLine("String after removing duplicates: " + result.Length);
+ }
+     catch(Exception e)
+     {
+     Console.WriteLine("Exception: " + e.Message); 
+     }
+  }
+  }
+}
